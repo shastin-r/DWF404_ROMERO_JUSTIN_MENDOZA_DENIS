@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="DWF404_ROMERO_JUSTIN_MENDOZA_DENIS:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>DWF404_ROMERO_JUSTIN_MENDOZA_DENIS</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="DWF404_ROMERO_JUSTIN_MENDOZA_DENIS-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="DWF404_ROMERO_JUSTIN_MENDOZA_DENIS:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Registrar Visita</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h:panelGrid columns="2">
+
+            <!-- Campo para el nombre del cliente -->
+            <h:outputLabel value="Nombre del Cliente:" />
+            <h:inputText value="#{visitaBean.nombreCliente}" />
+
+            <!-- Campo para la fecha de entrada -->
+            <h:outputLabel value="Fecha de Entrada:" />
+            <h:inputText value="#{visitaBean.fechaIniEstadia}" />
+            <!-- Si usas PrimeFaces, puedes cambiarlo a un calendario: -->
+            <!-- <p:calendar value="#{visitaBean.fechaIniEstadia}" pattern="yyyy-MM-dd" /> -->
+
+            <!-- Campo para la fecha de salida -->
+            <h:outputLabel value="Fecha de Salida:" />
+            <h:inputText value="#{visitaBean.fechaFinEstadia}" />
+            <!-- Si usas PrimeFaces, puedes cambiarlo a un calendario: -->
+            <!-- <p:calendar value="#{visitaBean.fechaFinEstadia}" pattern="yyyy-MM-dd" /> -->
+
+            <!-- Campo para el tipo de cuarto -->
+            <h:outputLabel value="Tipo de Cuarto:" />
+            <h:selectOneMenu value="#{visitaBean.tipoCuarto}">
+                <f:selectItem itemValue="Económica" itemLabel="Económica" />
+                <f:selectItem itemValue="Estándar" itemLabel="Estándar" />
+                <f:selectItem itemValue="Lujo" itemLabel="Lujo" />
+            </h:selectOneMenu>
+
+            <!-- Botón para registrar la visita -->
+            <h:commandButton value="Registrar Visita" action="#{visitaBean.registrarVisita}" />
+
+            <!-- Mostrar el costo total después de registrar -->
+            <h:outputLabel value="Costo Total:" />
+            <h:outputText value="#{visitaBean.costoTotal}" />
+
+        </h:panelGrid>
+    </h:form>
+</h:body>
+</html>
